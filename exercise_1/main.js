@@ -9,9 +9,11 @@ function decreaseScore(user) {
   if (scores[user] == 0) return;
   scores[user]--;
   document.getElementById(`${user}-score`).textContent = scores[user];
+  console.log(scores[user]);
 }
 
 function increaseScore(user) {
   scores[user]++;
   document.getElementById(`${user}-score`).textContent = scores[user];
+  console.log(scores[user]);
 }

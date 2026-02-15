@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Objects In JavaScript</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="main.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+  <div class="max-w-5xl px-6 py-12 mx-auto min-h-screen flex flex-col items-center relative">
+
+    <header class="mb-12 text-center">
+      <nav class="mb-8 self-start absolute left-0 px-5">
+        <a href="../index.html"
+          class="group inline-flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors duration-200">
+          <div
+            class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 group-hover:bg-blue-100 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </div>
+          <span class="font-bold text-sm uppercase tracking-wide">Go Back</span>
+        </a>
+      </nav>
+      <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 mb-3">
+        Digging into <span class="text-blue-600">Objects and Arrays</span>
+      </h1>
+      <p class="text-lg text-slate-500 italic">Get the number 123 out of an object</p>
+    </header>
+
+    <main class="w-full max-w-2xl">
+      <section class="flex flex-col gap-8">
+
+        <article class="overflow-hidden rounded-2xl border border-slate-200 shadow-sm bg-white">
+          <div class="bg-slate-800 px-4 py-2 flex items-center gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+            <span class="ml-2 text-xs font-mono text-slate-400">myCrazyObject.js</span>
+          </div>
+          <div class="p-6 bg-slate-900">
+            <h1 class="text-blue-400 font-mono text-sm mb-4 uppercase tracking-widest font-bold">// The Object:</h1>
+            <div class="text-indigo-200 font-mono text-sm leading-relaxed overflow-x-auto">
+              <span class="text-pink-400">var</span> <span class="text-yellow-200">myCrazyObject</span> = {
+              <span class="text-green-400">"name"</span>: <span class="text-orange-300">"A ridiculous object"</span>,
+              <span class="text-green-400">"some array"</span>: [<span class="text-purple-400">7</span>, <span
+                class="text-purple-400">9</span>, { <span class="text-slate-300">purpose:</span> <span
+                class="text-orange-300">"confusion"</span>, <span class="text-slate-300">number:</span> <span
+                class="text-purple-400">123</span> }, <span class="text-purple-400">3.3</span>],
+              <span class="text-green-400">"random animal"</span>: <span class="text-orange-300">"Banana Shark"</span>
+              };
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-2xl shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-7.636l-.707-.707m1.707 15.071l-.707.707M16.243 19.071l-.707-.707M12 21v-1m0-5a3 3 0 100-6 3 3 0 000 6z" />
+            </svg>
+            <h1 class="text-lg font-bold text-blue-900">The Solution</h1>
+          </div>
+          <div class="bg-white/60 p-4 rounded-lg border border-blue-100">
+            <code class="text-blue-800 font-mono font-bold break-all">
+              console.log(myCrazyObject["some array"][2].number);
+            </code>
+          </div>
+        </article>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
